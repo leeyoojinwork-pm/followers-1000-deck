@@ -256,16 +256,9 @@
   .cover-visual .shotwrap{width:100%;margin:0 auto}
   .cover-cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--cherry);color:#fff;font-family:var(--disp);font-weight:700;font-size:14px;letter-spacing:.04em;padding:12px 22px;border-radius:30px;text-decoration:none;box-shadow:0 8px 20px rgba(210,58,110,.3)}
   .shotwrap{flex:0 0 auto;width:min(300px,23cqw);margin:0 0 0 auto;position:relative}
-  .shotwrap:not(a)::before{content:"";position:absolute;inset:31% 8% 10%;border:3px solid var(--cherry);border-radius:12px;z-index:2;pointer-events:none}
-  .shotwrap:not(a)::after{content:"›";position:absolute;left:-80px;top:47%;font-size:58px;line-height:1;color:var(--cherry);font-weight:800;z-index:2}
   .shot{width:100%;border-radius:22px;border:6px solid #fff;box-shadow:0 14px 40px rgba(163,30,82,.18);display:block}
   .shotwrap:not(a) .shot{aspect-ratio:9/16;object-fit:cover;object-position:center 14%;border-radius:26px;border:4px solid var(--cherry);box-shadow:0 16px 44px rgba(163,30,82,.22)}
-  .shotwrap:has(img[alt="릴스 인사이트 요약"])::before{inset:53% 8% 13% 8%;border-width:2px;border-radius:8px}
-  .shotwrap:has(img[alt="릴스 인사이트 요약"])::after{content:"";left:-48px;top:69%;width:54px;height:3px;background:var(--cherry);border-radius:999px}
-  .shotwrap:has(img[alt="시청 시간과 조회 출처"])::before{inset:36% 8% 12% 10%;border-radius:10px}
-  .shotwrap:has(img[alt="시청 시간과 조회 출처"])::after{content:"";left:-44px;top:57%;width:52px;height:3px;background:var(--cherry);border-radius:999px}
   .shotwrap:has(img[alt="시청 시간과 조회 출처"]) .shot{object-position:center 6%}
-  .shotwrap:has(img[alt="타겟 상세 정보"])::before{display:none}
   .shotcap{text-align:center;font-size:12px;color:var(--warmgrey);margin-top:10px;letter-spacing:.04em}
   /* 개조식 */
   .points{list-style:none;max-width:560px;margin-top:4px}
@@ -277,7 +270,7 @@
   .situation-frame .lead{max-width:100%;margin-top:auto;white-space:nowrap;font-size:clamp(17px,1.65cqw,24px)}
   .situation-card b{color:var(--cherry-deep);font-weight:800}
   @media (min-width:821px){.cols{flex-wrap:nowrap}.cols .shotwrap,.cols .cover-visual{order:2}.cols .txt{order:1}}
-  @media (max-width:760px){.slide{padding:8vh 6vw}.cols{gap:26px}.shotwrap{width:min(320px,80vw)}.shotwrap:not(a)::after{display:none}}
+  @media (max-width:760px){.slide{padding:8vh 6vw}.cols{gap:26px}.shotwrap{width:min(320px,80vw)}}
 </style>
 </head>
 <body>
@@ -521,12 +514,6 @@
   <span class="slide-no">09 / 22</span>
 </div></section>
 
-<section class="slide"><div class="frame statement-frame">
-  <h2>“공략집 받고 싶다”를<br>댓글 행동으로 바꿨어요</h2>
-
-  <span class="slide-no">10 / 22</span>
-</div></section>
-
 <section class="slide"><div class="frame">
   <p class="eyebrow">Part 3 리뷰어의 관점</p>
   <div class="partmark">03</div>
@@ -759,7 +746,6 @@
     <div class="lesson-body">
       <div class="lesson-head">
         <b>오늘의 교훈 6가지</b>
-        <span>5일 1,000명은 공식이 아니라, 조건 위에서 나온 결과예요</span>
       </div>
       <div class="lesson-columns">
         <div class="lesson-col">
