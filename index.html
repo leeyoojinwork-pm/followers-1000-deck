@@ -29,9 +29,16 @@
   .frame:has(.shotwrap:not(a))::before{display:none}
   .frame:has(.shotwrap:not(a)) > *{position:relative;z-index:1}
   .slide-no{position:absolute;bottom:3.5%;left:4.2%;font-size:11px;letter-spacing:.18em;color:var(--warmgrey)}
+  .navbtn{position:fixed;top:50%;transform:translateY(-50%);z-index:20;width:48px;height:64px;border:0;background:rgba(210,58,110,.9);color:#fff;border-radius:999px;font-family:var(--disp);font-size:34px;font-weight:800;line-height:1;cursor:pointer;box-shadow:0 12px 28px rgba(163,30,82,.24)}
+  .navbtn.prev{left:18px}
+  .navbtn.next{right:18px}
+  .navbtn:hover{background:var(--cherry-deep)}
+  .navbtn:focus-visible{outline:3px solid #fff;outline-offset:3px}
   @media (max-width:820px){
     .slide{height:auto;min-height:100vh;padding:5vh 0}
     .frame{aspect-ratio:auto;width:94vw;min-height:88vh;padding:7% 6%}
+    .navbtn{width:38px;height:52px;font-size:26px}
+    .navbtn.prev{left:8px}.navbtn.next{right:8px}
   }
   .eyebrow{font-size:13px;letter-spacing:.2em;color:var(--cherry);font-weight:700;margin-bottom:18px}
   h1,h2{font-family:var(--disp);font-weight:800;text-wrap:balance;letter-spacing:-.01em}
@@ -303,27 +310,27 @@
       <span class="term">Part 1 제작자의 관점</span>
       <p style="font-family:var(--disp);font-weight:700;font-size:16px;margin:4px 0 8px">먼저 어떤 상황이었는지 봐요</p>
       <ul class="points">
-        <li>Fable 기한 종료가 어떤 압박을 만들었는지 봐요</li>
-        <li>오가닉 성공 사례가 없던 계정 상황을 봐요</li>
-        <li>팔로우 요청보다 자료 제공을 먼저 잡았어요</li>
+        <li>Fable 기한 종료가 가져온 상황</li>
+        <li>처음 계정을 생성한 상황</li>
+        <li>팔로우 전환보다 자료 제공을 먼저</li>
       </ul>
     </div>
     <div class="card">
       <span class="term">Part 2 상품기획의 관점</span>
       <p style="font-family:var(--disp);font-weight:700;font-size:16px;margin:4px 0 8px">공략집을 어떻게 기획했는지 봐요</p>
       <ul class="points">
-        <li>답변 모음이 아니라 업무 기준 워크북으로 잡았어요</li>
-        <li>레벨맵, 공식, 예시, 복붙 프롬프트를 반복했어요</li>
-        <li>출처 수위와 개인 코멘트로 신뢰를 보강했어요</li>
+        <li>프롬프트 모음이 아닌 업무 기준 워크북</li>
+        <li>레벨맵, 공식, 예시, 복붙 프롬프트를 반복</li>
+        <li>공신력있는 출처와 개인 코멘트로 차별화</li>
       </ul>
     </div>
     <div class="card">
       <span class="term">Part 3 리뷰어의 관점</span>
       <p style="font-family:var(--disp);font-weight:700;font-size:16px;margin:4px 0 8px">훅, 댓글, 프로필 예상 UX</p>
       <ul class="points">
-        <li>질문만 하면 손해라는 훅이 멈추게 했어요</li>
-        <li>댓글과 DM이 자료 전달 동선이 됐어요</li>
-        <li>프로필에서 다음 자료를 기대하게 만들었어요</li>
+        <li>질문만 하면 손해라는 훅(AS-IS)</li>
+        <li>댓글과 DM을 통한 자료 전달 UX 설계</li>
+        <li>bio 설명을 통한 다음 자료 기대감 생성</li>
       </ul>
     </div>
   </div>
@@ -336,14 +343,14 @@
   <div class="partmark">01</div>
   <div class="partline"></div>
   <h2>만들기 전에<br>무엇을 먼저 설계했나</h2>
-  <p class="partlead">팔로워를 모으기 전에, 받을 이유와 남을 이유부터 만들었어요.</p>
+  <p class="partlead">팔로워를 모으기 전에, 상품부터 만들었어요.</p>
 
   <span class="slide-no">03 / 22</span>
 </div></section>
 
 <section class="slide"><div class="frame">
   <p class="eyebrow">제작자 관점 한 장 요약</p>
-  <h2>업로드 전에 이렇게<br>기획했어요</h2>
+  <h2>업로드 전 이렇게<br>ONE-PAGE 콘텐츠를 기획했어요</h2>
   <div class="plan-layout">
     <div class="plan-sheet">
       <div class="plan-sheet-head">
@@ -353,14 +360,14 @@
       </div>
       <div class="plan-row">
         <div class="plan-label">목표</div>
-        <div class="plan-body"><span>팔로워를 부탁하는 릴스가 아니라, 자료를 받고 싶게 만드는 릴스를 만든다.</span></div>
+        <div class="plan-body"><span>알짜배기 자료를 받고 싶게 만드는 릴스를 만든다.</span></div>
       </div>
       <div class="plan-row">
         <div class="plan-label">당시 상황</div>
         <div class="plan-body">
           <ul>
-            <li><b>Fable 무료 기한 종료 직전</b>이라 지금 정리해야 할 이유가 있었다.</li>
-            <li>본계정 릴스는 전부 협찬 광고였고, 오가닉 성공 사례는 없었다.</li>
+            <li>Fable 무료 기한 종료 직전이라 지금 정리해야 할 이유가 있었다.</li>
+            <li>첫 계정 생성 후 황금 타임이라 팔로워 확보가 핵심 목표였다.</li>
           </ul>
         </div>
       </div>
@@ -378,7 +385,7 @@
       </div>
       <div class="plan-row">
         <div class="plan-label">최종 행동</div>
-        <div class="plan-body">팔로우 요청 대신 댓글을 남기게 한다. 댓글은 신청 행동이고, DM은 자료 전달이다.</div>
+        <div class="plan-body">팔로우 요청보다 댓글을 남기게 한다. 댓글은 신청 행동이기 때문.</div>
       </div>
       <div class="plan-row">
         <div class="plan-label">확인할 숫자</div>
@@ -401,8 +408,8 @@
     <div class="situation-card">
       <div class="situation-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
       <span class="term">시장 맥락</span>
-      <b>무료로 써 보던 시간이 끝나고 있었어요</b>
-      <p>Fable을 써 본 사람들은 “기한 끝나기 전에 정리해야겠다”는 압박이 있었어요.</p>
+      <b>무료 사용기간이 끝나고 있었어요</b>
+      <p>Fable을 써 본 사람들은 “기한 끝나기 전에 무조건 써야겠다”는 압박이 있었어요.</p>
     </div>
     <div class="situation-card">
       <div class="situation-icon"><svg viewBox="0 0 24 24"><path d="M7 8h10M7 12h7M7 16h4"/><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-8l-4 3v-3H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
@@ -413,19 +420,11 @@
     <div class="situation-card">
       <div class="situation-icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M6 7l1 13h10l1-13"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M9 12h6"/></svg></div>
       <span class="term">기획 질문</span>
-      <b>콘텐츠를 어떻게 만들까가 아니었어요</b>
+      <b>지금 사람들이 받고 싶은 자료는?</b>
       <p>먼저 물은 건 “지금 사람들이 바로 받고 싶어 할 자료가 뭘까?”였어요.</p>
     </div>
   </div>
   <p class="lead">그래서 시작점은 조회수 목표가 아니었어요. Fable 제한 상황에서 사람들이 바로 받고 싶어 할 자료를 찾는 거였어요.</p>
-  <div class="hypothesis-card">
-    <div class="hypothesis">
-      <div class="hypothesis-item"><small>문제</small><p>그냥 팔로우를 모으면, 진짜 관심 있는 사람인지 알 수 없다.</p></div>
-      <div class="hypothesis-arrow">↓</div>
-      <div class="hypothesis-item"><small>해결</small><p>지금 필요한 자료를 먼저 주고, 댓글로 받게 한다.</p></div>
-    </div>
-  </div>
-
   <span class="slide-no">05 / 22</span>
 </div></section>
 
@@ -434,7 +433,7 @@
   <div class="partmark">02</div>
   <div class="partline"></div>
   <h2>공략집을 어떻게<br>받고 싶게 만들었나</h2>
-  <p class="partlead">여기서는 릴스보다 먼저 만든 Fable 5 공략집 PDF의 구조를 봅니다.</p>
+  <p class="partlead">여기서는 릴스보다 제공한 Fable 5 공략집 PDF의 구조를 봅니다.</p>
 
   <span class="slide-no">06 / 22</span>
 </div></section>
@@ -461,8 +460,8 @@
       <h3>그래서 받을 자료를 이렇게 정의했어요</h3>
       <ul class="guide-list">
         <li><b>문제</b><span>사람들은 Fable이 궁금했지만, 단순 사용법만 보면 저장하고 끝날 가능성이 컸어요.</span></li>
-        <li><b>전환</b><span>질문법을 알려주는 자료가 아니라, 내 업무에 바로 붙일 기준표로 바꿨어요.</span></li>
-        <li><b>약속</b><span>언제 쓰는지, 어떤 입력이 필요한지, 왜 이렇게 짰는지까지 같이 남겼어요.</span></li>
+        <li><b>전환</b><span>질문법을 알려주는 자료가 아니라, 내 업무에 바로 붙일 플레이북으로 바꿨어요.</span></li>
+        <li><b>설계</b><span>언제 쓰는지, 어떤 입력이 필요한지, 왜 이렇게 짰는지까지 같이 남겼어요.</span></li>
         <li><b>CTA</b><span>댓글에 “공략집”을 남기면 DM으로 PDF를 받는 구조로 만들었어요.</span></li>
       </ul>
       <a class="reel-link" href="https://www.instagram.com/reel/DayNXmByPhP/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener">
@@ -477,7 +476,7 @@
 
 <section class="slide"><div class="frame">
   <p class="eyebrow">Part 2 상품 구성, 16페이지 설계</p>
-  <h2>16페이지는 목차가 아니라<br>사용 루트로 짰어요</h2>
+  <h2>16페이지의 내용 구성은<br>단순한 목차가 아니라 사용자 여정으로(UX) 짰어요</h2>
   <div class="guide-map">
     <div class="route-card" data-step="01">
       <strong>앞부분은 받을 이유를 만들었어요</strong>
@@ -505,8 +504,8 @@
 
 <section class="slide"><div class="frame">
   <p class="eyebrow">Part 2 상품화 판단</p>
-  <h2>프롬프트 원문만 주면<br>상품이 약해져요</h2>
-  <p class="lead">공략집의 핵심은 “복붙 자료”가 아니었어요. 보는 사람이 자기 프롬프트와 업무 방식에 바로 옮길 수 있는 기준을 남기는 거였어요.</p>
+  <h2>프롬프트 원문만 주면<br>차별성없는 상품</h2>
+  <p class="lead">공략집의 핵심은 “복붙 자료”가 아니었어요. 보는 사람이 자기 프롬프트와 업무 방식에 바로 옮길 수 있는 방법을 설계하는 거였어요.</p>
   <div class="product-logic">
     <div class="logic-card">
       <small>원칙 1</small>
@@ -637,7 +636,7 @@
   <span class="kicker">Solution 2 댓글 행동</span>
   <div class="cols">
     <div class="txt">
-      <h2>댓글 3,523개,<br>우연이 아니에요</h2>
+      <h2>댓글 3,523개,<br>점진적으로 조회수가 증가되었어요.</h2>
       <ul class="points">
         <li>설계: <b>팔로우 말고, 댓글을 달고 싶게 만들자</b></li>
         <li>구조: 댓글을 남기면 DM으로 공략집이 가요</li>
@@ -713,7 +712,7 @@
     <div class="ia-cell">바이오 확인</div>
     <div class="ia-cell row-end main">팔로우</div>
 
-    <div class="ia-map-note"><b>핵심</b>은 중간에 빠지는 행동을 줄이는 거예요. 훅, 상품, 댓글, DM, 프로필이 한 문장처럼 이어져야 팔로우까지 갑니다.</div>
+    <div class="ia-map-note">핵심은 중간에 이탈되는 행동을 줄이는 거예요. 훅, 상품, 댓글, DM, 프로필이 한 문장처럼 이어져야 팔로우 유지까지 갑니다.</div>
   </div>
 
   <span class="slide-no">19 / 22</span>
@@ -777,17 +776,17 @@
         <div class="lesson-col">
           <h3>맥락 있는 설계</h3>
           <ul class="lesson-list">
-            <li><em>01</em> 팔로워보다 받을 이유가 먼저예요.</li>
-            <li><em>02</em> 훅은 보는 사람의 자기 얘기여야 해요.</li>
-            <li><em>03</em> 본 콘텐츠와 받는 자료는 1:1로 맞아야 해요.</li>
+            <li><em>01</em> 팔로워보다 제공할 상품을 먼저 설계하자.</li>
+            <li><em>02</em> 훅은 보는 사람의 핵심 문제를 찌르자.</li>
+            <li><em>03</em> 본 콘텐츠와 제공되는 자료는 1:1 매칭시키자.</li>
           </ul>
         </div>
         <div class="lesson-col">
           <h3>전환되는 흐름</h3>
           <ul class="lesson-list">
-            <li><em>04</em> 노출은 팔로우가 아니라 댓글이 만들어요.</li>
-            <li><em>05</em> 팔로우를 남게 하는 건 바이오예요.</li>
-            <li><em>06</em> 세 번 재현되기 전까지는 공식이 아니에요.</li>
+            <li><em>04</em> 점진적인 노출은 팔로우가 아니라 댓글이 만든다.</li>
+            <li><em>05</em> 팔로우를 유지 하는 건 바이오다.</li>
+            <li><em>06</em> 세 번 재현되기 전까지는 공식이 아니다.</li>
           </ul>
         </div>
       </div>
@@ -798,6 +797,9 @@
 
   <span class="slide-no">22 / 22</span>
 </div></section>
+
+<button class="navbtn prev" type="button" aria-label="이전 슬라이드">&lt;</button>
+<button class="navbtn next" type="button" aria-label="다음 슬라이드">&gt;</button>
 
 <script>
   document.querySelectorAll('.slide-no').forEach((el,i)=>{
@@ -810,6 +812,8 @@
     if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();goTo(1)}
     if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();goTo(-1)}
   });
+  document.querySelector('.navbtn.prev')?.addEventListener('click',()=>goTo(-1));
+  document.querySelector('.navbtn.next')?.addEventListener('click',()=>goTo(1));
 </script>
 </body>
 </html>
