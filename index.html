@@ -245,10 +245,6 @@
   .sig{font-family:var(--disp);color:var(--cherry-deep);font-size:14px;letter-spacing:.03em;font-weight:500}
   .navhint{position:fixed;bottom:20px;right:24px;font-size:12px;color:var(--warmgrey);letter-spacing:.1em;
     background:var(--cream);border:1px solid var(--line);padding:6px 14px;border-radius:20px;z-index:9}
-  .navbtn{position:fixed;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(255,251,253,.86);color:var(--cherry);font-size:28px;font-weight:700;line-height:1;display:grid;place-items:center;box-shadow:0 10px 24px rgba(163,30,82,.12);z-index:10;cursor:pointer}
-  .navbtn.prev{left:18px}
-  .navbtn.next{right:18px}
-  .navbtn:hover{background:var(--cherry);color:#fff}
   em{font-style:normal;color:var(--cherry);font-weight:700}
   .dim{color:var(--warmgrey);font-size:13.5px;font-weight:400}
   /* 2단: 분석 + 캡처 */
@@ -274,7 +270,7 @@
   .points li::before{content:"";position:absolute;left:2px;top:19px;width:7px;height:7px;background:var(--cherry);border-radius:50%}
   .points b{color:var(--ink);font-weight:700}
   @media (min-width:821px){.cols{flex-wrap:nowrap}.cols .shotwrap,.cols .cover-visual{order:2}.cols .txt{order:1}}
-  @media (max-width:760px){.slide{padding:8vh 6vw}.cols{gap:26px}.shotwrap{width:min(320px,80vw)}.shotwrap:not(a)::after{display:none}.navbtn{width:36px;height:36px;font-size:22px}.navbtn.prev{left:8px}.navbtn.next{right:8px}}
+  @media (max-width:760px){.slide{padding:8vh 6vw}.cols{gap:26px}.shotwrap{width:min(320px,80vw)}.shotwrap:not(a)::after{display:none}}
 </style>
 </head>
 <body>
@@ -803,8 +799,6 @@
   <span class="slide-no">22 / 22</span>
 </div></section>
 
-<button class="navbtn prev" type="button" aria-label="이전 슬라이드">&lt;</button>
-<button class="navbtn next" type="button" aria-label="다음 슬라이드">&gt;</button>
 <script>
   document.querySelectorAll('.slide-no').forEach((el,i)=>{
     el.textContent=`${String(i+1).padStart(2,'0')} / ${document.querySelectorAll('.slide').length}`;
@@ -812,8 +806,6 @@
   const slides=[...document.querySelectorAll('.slide')];
   const currentIndex=()=>slides.findIndex(s=>s.getBoundingClientRect().top>-window.innerHeight/2);
   const goTo=(delta)=>slides[Math.min(Math.max(currentIndex()+delta,0),slides.length-1)]?.scrollIntoView({behavior:'smooth'});
-  document.querySelector('.navbtn.prev')?.addEventListener('click',()=>goTo(-1));
-  document.querySelector('.navbtn.next')?.addEventListener('click',()=>goTo(1));
   document.addEventListener('keydown',e=>{
     if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();goTo(1)}
     if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();goTo(-1)}
